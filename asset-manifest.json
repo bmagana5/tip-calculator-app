@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/bmagana5/tip-calculator-app/static/css/main.684b4e42.css",
+    "main.js": "/bmagana5/tip-calculator-app/static/js/main.89525d9a.js",
+    "static/media/SpaceMono-Regular.ttf": "/bmagana5/tip-calculator-app/static/media/SpaceMono-Regular.8a2aa304d0bd5e41d186.ttf",
+    "static/media/SpaceMono-Bold.ttf": "/bmagana5/tip-calculator-app/static/media/SpaceMono-Bold.056ac3ebe5f65cb5c4ac.ttf",
+    "static/media/logo.svg": "/bmagana5/tip-calculator-app/static/media/logo.3cc0528bd46321d63d85702006069614.svg",
+    "static/media/icon-dollar.svg": "/bmagana5/tip-calculator-app/static/media/icon-dollar.9f9be3534a9295a6595764d63a7bf3a3.svg",
+    "static/media/icon-person.svg": "/bmagana5/tip-calculator-app/static/media/icon-person.65bfd20465dd1d2cb58c0b53e1160442.svg",
+    "index.html": "/bmagana5/tip-calculator-app/index.html",
+    "main.684b4e42.css.map": "/bmagana5/tip-calculator-app/static/css/main.684b4e42.css.map",
+    "main.89525d9a.js.map": "/bmagana5/tip-calculator-app/static/js/main.89525d9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.684b4e42.css",
+    "static/js/main.89525d9a.js"
+  ]
+}
