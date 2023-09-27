@@ -14,11 +14,10 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+
+This is my submission for the Frontend Mentor Tip Calculator App. This app has a mobile and desktop version. The user inputs a bill total, selects or types in a custom tip amount, and enters a count a people to split the bill amongst. 
 
 ### The challenge
 
@@ -30,83 +29,64 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Mobile Version:
+![Mobile Version of the Tip Calculator App](./screenshot-mobile.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Desktop Version of the Tip Calculator App](./screenshot-desktop.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://bmagana5.github.io/tip-calculator-app/)
 
 ## My process
+
+I like building out the web page HTML "skeleton" out, first. Then, I gradually add CSS that gives elements dimension, positioning, and colors. Then, I like to add in different CSS styling for specific events like hover, active, focus, etc. Once I have this completed, I add in the React and JavaScript functionality and embed any state variables into the HTML hierarchy as needed.
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+In this challenge, I learned more about setting viewport width breakpoints. This is useful for making a web app functional in both mobile and desktop devices. 
 
-To see how you can add code snippets, see below:
-
+Working with the input fields was the most challenging aspect of this project. I intended to use 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<input type="number" onChange="handleInput"/>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+at first, however whenever invalid input was detected, it was impossible to implement any error-handling/validation since the invalid input was removed from the event that was caught by the onchange handler. As a result, I had to make use of the <code>type="number"</code> variation of the input element and validate the input using a regular expression.
+
+That code looked like this:
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+switch (name) {
+  /**/
+  case 'bill':
+      value = !value.match(/^\d*\.{0,1}\d{0,2}$/) ? bill : value;
+      value === '' ?
+          setBill('')
+          : setBill(value);
+      break;
+  /**/
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+The regular expression checked if the input was a string that began with at least one digit, was followed by at most one period (.), and ended with at most 2 digits. This valid string was stored in a state hook variable and was then cast to a Number whenever it was needed.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+My biggest take away from this challenge is using regular expressions. I learned about deriving a regex from finite-state automata in my undergrad CS studies, but I never actually really used them in any other capacity beside homework assignments. Relearning about regular expressions and using them to solve this problem truly made things feel a lot easier. I think I'd like to continue learning and using these more, as they could be used to quickly solve some problems that would otherwise be difficult through conventional solving attempts.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [W3Schools take on Regular Expressions](https://www.w3schools.com/jsref/jsref_obj_regexp.asp) - This helped me figure out how to write out the regular expression based on what I know I needed the valid string to look like. Excellent and concise guide.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Brian Magana
+- Frontend Mentor - [@bmagana5](https://www.frontendmentor.io/profile/bmagana5)
